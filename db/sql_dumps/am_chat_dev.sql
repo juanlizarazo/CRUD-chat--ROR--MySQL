@@ -114,3 +114,8 @@ UNLOCK TABLES;
 
 INSERT INTO `am_chat_dev`.`users` (`user_name`, `password`, `first_name`, `last_name`) VALUES ('Allenardo', 'root', 'Devan', 'Allen');
 INSERT INTO `am_chat_dev`.`users` (`user_name`, `password`, `first_name`, `last_name`) VALUES ('Juan', 'root', 'Juan', 'Lizarazo');
+ALTER TABLE `am_chat_dev`.`users` 
+ADD COLUMN `profile_pic` VARCHAR(24) NULL AFTER `login_attempts`;
+UPDATE `am_chat_dev`.`users` SET `profile_pic`='allenardo.jpeg' WHERE `id`='1';
+UPDATE `am_chat_dev`.`users` SET `profile_pic`='juan.jpeg' WHERE `id`='2';
+
