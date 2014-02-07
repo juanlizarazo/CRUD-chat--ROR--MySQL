@@ -1,15 +1,18 @@
-<% @messages.each do |message| %>
-  <li class="<%= (message.sent_by == @logged_in_user) ? 'user' : 'other-user' %>">
-    <div class="user-image">
-      <%= render_profile_pic(message.user) %>
-    </div>
-    <div class="messages">
-      <p class="messages-main"><%= message.message %></p>
-      <% 
-      time = Time.at (message.created_at)
-      sent_at = time.strftime("%b %d, %Y at %I:%M %p")
-      %>
-      <p class="message-info">Sent by <%= message.user.user_name %> on <%= sent_at %></p>
-    </div>
-  </li>
+<% if check_new_messages %>  
+  <% @messages.each do |message| %>
+    <li class="<%= (message.sent_by == @logged_in_user) ? 'user' : 'other-user' %>">
+      <div class="user-image">
+        <%= render_profile_pic(message.user) %>
+      </div>
+      <div class="messages">
+        <p class="messages-main"><%= message.message %></p>
+        <% 
+        time = Time.at (message.created_at)
+        sent_at = time.strftime("%b %d, %Y at %I:%M %p")
+        %>
+        <p class="message-info">Sent by <%= message.user.user_name %> on <%= sent_at %></p>
+      </div>
+    </li>
+    <% session[:message_id] = message.id%>
+  <% end %>
 <% end %>

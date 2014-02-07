@@ -19,8 +19,8 @@ class ChatController < ApplicationController
     @messages = Message.find(:all, :conditions => { :deleted => 0 })
     
     @messages.each do |message| 
-      message.deleted = 1
-      message.save
+        message.deleted = 1
+        message.save
     end
   end
   
