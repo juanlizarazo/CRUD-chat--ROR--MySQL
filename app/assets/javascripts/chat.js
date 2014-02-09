@@ -1,6 +1,6 @@
 $(function() {
-  
-  setInterval(function(){ load_messages(); }, 1000 );
+
+  setInterval(function(){ check_new_message(); }, 1000 );
   
   $('#message-box').bind('send-message',function(e){
      send_message();
@@ -12,17 +12,41 @@ $(function() {
       }
   });
   
+  $('#discussion').bind('scroll', function(){
+    if( $(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+      $('#new-message').fadeOut();
+    }
+  });  
 });
 
-function load_messages() {
-  $('#discussion').load( '/chat/load_messages', function() {
-    $(this).scrollTop( $(this)[0].scrollHeight );
+var scroll_chat = false;
+
+function check_new_message() {
+  
+  $.post( '/chat/new_message', {authenticity_token: authenticity_token}, function(response) {
+    
+    if ( parseInt( response ) ) {
+      $.get( '/chat/load_messages', function( messages ) {
+        
+        $('#discussion').append( messages );
+
+        if (scroll_chat) {
+          $('#discussion').scrollTop( $('#discussion')[0].scrollHeight );
+          scroll_chat = false;
+        } else if ( $('#discussion').html().length > 1200 ){
+          $('#new-message').fadeIn();
+        }
+        
+      });
+    }
+    
   });
+  
 }
 
 function clear_chat() {
   $.post( '/chat/clear_messages', {authenticity_token: authenticity_token}, function() {
-    load_messages(); 
+    $('#discussion').html(''); 
   });
 }
 
@@ -31,8 +55,8 @@ function send_message() {
   
   $.post( '/chat/send_message', {message: message, authenticity_token: authenticity_token} ,function( response ) {
     if (response) {
-      load_messages();
       $('#message-box').val('');
+      scroll_chat = true;
     }
   });
 }

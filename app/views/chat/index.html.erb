@@ -7,7 +7,7 @@
   <%= stylesheet_link_tag 'chat' %>
 </head>
 <body>
-  
+
 <section class="chat-box">
 
   <header class="chat-header">
@@ -20,6 +20,9 @@
   <ol class="discussion" id="discussion">
     <!--messages go here -->
   </ol>
+  <div id="new-message">
+    &#9660; New messages
+  </div>
   <input class="message-box" id="message-box" placeholder="Write your message...">
   <div class="copyright"> Juan Lizarazo & Devan Allen &copy; <%= Time.now.year %></div>
 </section>
