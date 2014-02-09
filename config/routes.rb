@@ -6,6 +6,7 @@ AmChat::Application.routes.draw do
   
   # message history partial
   get 'chat/load_messages'
+  post 'chat/new_message'
   
   # Clear messages
   post 'chat/clear_messages'

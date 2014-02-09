@@ -122,10 +122,22 @@ div.copyright {
 
 .message-info {
   font-size: 0.7rem;
-  color: #4A5C4A;
+  color: #4A5C4A;ew
   font-style: italic;
 }
 
+#new-message {
+  display: none;
+  width: 565px; 
+  background: #435F9C; 
+  color: #ffffff;
+  position: absolute; 
+  margin-top:-20px; 
+  padding: 5px; 
+  margin-left: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
 /* Login view */
 
 .login-box {
