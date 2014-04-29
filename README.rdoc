@@ -11,7 +11,7 @@ This chat uses:
 - Rails 4
 - css3
 - html5
- 
+
 License
 ================
 
