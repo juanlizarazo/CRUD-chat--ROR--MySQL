@@ -12,7 +12,7 @@ This chat uses:
 - css3
 - html5
 
-Codeship status: https://www.codeship.io/projects/989685a0-b211-0131-3c4a-521e323ab49b/status
+![Codeship Status](https://www.codeship.io/projects/989685a0-b211-0131-3c4a-521e323ab49b/status)
 
 License
 ================
