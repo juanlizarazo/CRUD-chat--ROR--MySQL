@@ -1,3 +1,5 @@
+{<img alt="Status?branch=master" src="https://www.codeship.io/projects/989685a0-b211-0131-3c4a-521e323ab49b/status?branch=master" />}[https://www.codeship.io/projects/20029]
+
 Real time chat - RoR
 =============================================
 
