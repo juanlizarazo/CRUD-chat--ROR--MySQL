@@ -3,10 +3,10 @@
 
 development:
   adapter: mysql
-  database: am_chat_dev
-  username: root
-  password: root
-  host: localhost
+  database: heroku_dbf9e0680b7f87b
+  username: b09192cfccb724
+  password: 6d91032f
+  host: us-cdbr-east-05.cleardb.net
 
 test:
   adapter: mysql
