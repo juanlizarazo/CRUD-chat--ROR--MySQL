@@ -10,14 +10,14 @@ development:
 
 test:
   adapter: mysql
-  database: am_chat_test
-  username: root
-  password: 
-  host: localhost
+  database: heroku_dbf9e0680b7f87b
+  username: b09192cfccb724
+  password: 6d91032f
+  host: us-cdbr-east-05.cleardb.net
 
 production:
   adapter: mysql
-  database: am_chat_live
-  username: root
-  password: 
-  host: localhost
+  database: heroku_dbf9e0680b7f87b
+  username: b09192cfccb724
+  password: 6d91032f
+  host: us-cdbr-east-05.cleardb.net
