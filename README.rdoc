@@ -13,7 +13,9 @@ This chat uses:
 - html5
 
 Gotchas:
-- This app doesn't use migrations, db seeds, sofisticated sessions. We created it just for fun.
+- This app doesn't use migrations, db seeds, sofisticated sessions, form helpers, etc. 
+- We created it just for fun. The codebase can be improved. We didn't spent much time one it.
+- Feel free to submit a PR.
 
 License
 ================
