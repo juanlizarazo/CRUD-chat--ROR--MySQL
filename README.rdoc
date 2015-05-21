@@ -1,5 +1,7 @@
 Real time chat - RoR
 =============================================
+This chat was created in January 2014 for fun. 
+Codebase is not maintained.
 
 Real time chat running on Ruby on Rails.
 
