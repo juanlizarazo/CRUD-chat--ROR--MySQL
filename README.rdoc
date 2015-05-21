@@ -12,6 +12,9 @@ This chat uses:
 - css3
 - html5
 
+Gotchas:
+- This app doesn't use migrations, db seeds, sofisticated sessions. We created it just for fun.
+
 License
 ================
 
